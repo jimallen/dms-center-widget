@@ -7,9 +7,9 @@ A combined time, date, and weather widget for [DankMaterialShell](https://github
 
 ## Screenshots
 
-![Widget](widget.png)
+![Widget](widget.png?v=2)
 
-![Settings](screenshot.png)
+![Settings](screenshot.png?v=2)
 
 ## Features
 
