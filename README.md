@@ -5,6 +5,10 @@ A combined time, date, and weather widget for [DankMaterialShell](https://github
 ![DMS Plugin](https://img.shields.io/badge/DMS-Plugin-blue)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
+## Screenshot
+
+![Settings](screenshot.png)
+
 ## Features
 
 - **Time & Date Display** - Clean, customizable time and date
