@@ -18,6 +18,8 @@ PluginComponent {
     readonly property color dateColor: pluginData.dateColor || "#bcc2ff"
     readonly property color weatherColor: pluginData.weatherColor || "#cac1e9"
     readonly property bool showWeather: pluginData.showWeather !== undefined ? pluginData.showWeather : true
+    readonly property bool useDynamicTempColor: pluginData.dynamicTempColor !== undefined ? pluginData.dynamicTempColor : true
+    readonly property bool useDynamicIconColor: pluginData.dynamicIconColor !== undefined ? pluginData.dynamicIconColor : true
 
     function getTempColor(tempC) {
         if (tempC === null || tempC === undefined) return weatherColor;
@@ -57,11 +59,13 @@ PluginComponent {
     }
 
     readonly property color dynamicTempColor: {
+        if (!useDynamicTempColor) return weatherColor;
         if (!WeatherService.weather || !WeatherService.weather.available) return weatherColor;
         return getTempColor(WeatherService.weather.temp);
     }
 
     readonly property color dynamicIconColor: {
+        if (!useDynamicIconColor) return weatherColor;
         if (!WeatherService.weather || !WeatherService.weather.available) return weatherColor;
         return getConditionColor(WeatherService.weather.wCode);
     }

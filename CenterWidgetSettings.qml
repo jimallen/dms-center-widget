@@ -38,6 +38,29 @@ PluginSettings {
 
     StyledText {
         width: parent.width
+        text: "Dynamic Colors"
+        font.pixelSize: Theme.fontSizeLarge
+        font.weight: Font.Bold
+        color: Theme.surfaceText
+        topPadding: Theme.spacingM
+    }
+
+    ToggleSetting {
+        settingKey: "dynamicTempColor"
+        label: "Dynamic Temperature Color"
+        description: "Temperature changes color based on value (cold=blue, hot=red)"
+        defaultValue: true
+    }
+
+    ToggleSetting {
+        settingKey: "dynamicIconColor"
+        label: "Dynamic Icon Color"
+        description: "Icon changes color based on conditions (sunny=yellow, rain=blue)"
+        defaultValue: true
+    }
+
+    StyledText {
+        width: parent.width
         text: "Colors"
         font.pixelSize: Theme.fontSizeLarge
         font.weight: Font.Bold
@@ -62,7 +85,7 @@ PluginSettings {
     ColorSetting {
         settingKey: "weatherColor"
         label: "Weather Color"
-        description: "Color for weather icon and temperature"
+        description: "Fallback color when dynamic colors are disabled"
         defaultValue: "#cac1e9"
     }
 
